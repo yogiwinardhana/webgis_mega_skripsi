@@ -1,0 +1,93 @@
+
+/* Element Style */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: auto;
+}
+
+img {
+  align:center;
+  margin: 3rem 3rem;
+}
+
+/* ID style */
+#header {
+  margin-bottom: 2rem;
+}
+
+#middle {
+  height: 600px;
+  background-color: grey;
+}
+
+#content {
+  margin-top: 0;
+}
+
+#footer {
+  background-color: #ef8172;
+}
+
+#footer-map {
+  display: block;
+  padding: auto;
+  height: 1.7rem;
+  text-align:center;
+  background-color: grey;
+}
+
+/* navbar */
+.nav {
+  margin: 0;
+}
+
+.navbar {
+
+}
+
+.bg-danger {
+
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+.nav-item {
+  margin: 0 1.25rem;
+}
+
+.navbar-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Carousel Style */
+
+.carousel-caption {
+  top: 100px;
+}
+
+/* Footer Content */
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  color: #DAD6D6;
+}
+
+.icon-footer {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.icon-item {
+  margin: 0 1.25rem;
+}

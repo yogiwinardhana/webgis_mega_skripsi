@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <title> Map </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href='src/css/bootstrap.css'>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href='src/leaflet.css'>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin=""/>
+        <link rel="stylesheet" href='plugin/Leaflet.Pancontrol-master/L.Control.Pan.css'>
+        <link rel="stylesheet" href='plugin/Leaflet.zoomslider-master/L.Control.Zoomslider.css'>
+        <link rel="stylesheet" href='plugin/Leaflet-MiniMap-master/Control.MiniMap.css'>
+        <link rel="stylesheet" href='plugin/Leaflet.MousePosition-master/L.Control.MousePosition.css'>
+        <link rel="stylesheet" href='plugin/Leaflet.EasyButton-master/easy-button.css'>
+        <link rel="stylesheet" href='plugin/leaflet-sidebar-master/L.Control.Sidebar.css'>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="plugin/Leaflet.awesome-markers-2.0-develop/leaflet.awesome-markers.css">
+        <link rel="stylesheet" href="plugin/leaflet-marker-cluster/MarkerCluster.css">
+        <link rel="stylesheet" href="plugin/leaflet-marker-cluster/MarkerCluster.Default.css">
+        <link rel="stylesheet" href="plugin/Leaflet.zoomdisplay-master/src/L.Control.ZoomDisplay.css">
+        <link rel="stylesheet" href="plugin/leaflet-wms-legend-master/leaflet.wmslegend.css">
+        <link rel="stylesheet" href="plugin/Leaflet-IconLayers-master/src/iconLayers.css">
+        <link rel="stylesheet" href="plugin/leaflet-sidebar-v2-master/css/leaflet-sidebar.css">
+        <link rel="stylesheet" href="plugin/leaflet.fullscreen-master/Control.FullScreen.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <script src='src/leaflet.js'></script>
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+        <script src='src/jquery-3.2.0.min.js'></script>
+        <script src='plugin/Leaflet.Pancontrol-master/L.Control.Pan.js'></script>
+        <script src='plugin/Leaflet.zoomslider-master/L.Control.Zoomslider.js'></script>
+        <script src='plugin/Leaflet-MiniMap-master/Control.MiniMap.js'></script>
+        <script src='plugin/Leaflet.MousePosition-master/L.Control.MousePosition.js'></script>
+        <script src='plugin/Leaflet.EasyButton-master/easy-button.js'></script>
+        <script src='plugin/leaflet-sidebar-master/L.Control.Sidebar.js'></script>
+        <script src="plugin/leaflet-providers-master/leaflet-providers.js"></script>
+        <script src="plugin/Leaflet.awesome-markers-2.0-develop/leaflet.awesome-markers.js"></script>
+        <script src="plugin/leaflet-marker-cluster/leaflet.markercluster.js"></script>
+        <script src="plugin/Leaflet.zoomdisplay-master/src/L.Control.ZoomDisplay.js"></script>
+        <script src="js/better_wms.js"></script>
+        <script src="plugin/leaflet-wms-legend-master/leaflet.wmslegend.js"></script>
+        <script src="plugin/Leaflet-IconLayers-master/src/iconLayers.js"></script>
+        <script src="plugin/leaflet-sidebar-v2-master/js/leaflet-sidebar.js"></script>
+        <script src="plugin/leaflet.fullscreen-master/Control.FullScreen.js"></script>
+
+
+       <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            #mapdiv{
+                height:85vh;
+                background-color: white;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-danger">
+        <a class="navbar-brand" href="">Skripsi Mega</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsed-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapsed-1">
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="webgis/map.html">Map</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div id="mapdiv" class="col-md-12"></div>
+
+    <script src="js/main.js"></script>
+    </body>
+</html>

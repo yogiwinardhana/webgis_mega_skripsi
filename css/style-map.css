@@ -1,0 +1,13 @@
+/* Leaflet Element */
+body {
+  background-color: #ef8172;
+}
+
+#mapdiv{
+  height:85vh;
+  background-color: white;
+}
+
+.map-content {
+  margin-top: 4rem;
+}
