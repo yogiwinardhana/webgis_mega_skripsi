@@ -100,7 +100,8 @@ $('document').ready(function(){
     //var urlWMS = "http://5.189.156.171:8080//geoserver/gwc/service/wms";
 
     //For non geowebcache
-    var urlWMS = "http://5.189.156.171:8080/geoserver/wms";
+    // var urlWMS = "http://5.189.156.171:8080/geoserver/wms";
+    var urlWMS = "https://tomcat.geosai.my.id/geoserver/wms";
 
     // lyrWMS = L.tileLayer.betterWms(urlWMS, {
     //     layers: 'tutupan_lahan:penggunaan_tanah_2014',
